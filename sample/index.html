@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" id="ng-app">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div ng-controller="MyAppController" class="well ng-cloak" ng-cloak="">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" ng-model="model.name" ng-change="model.nameChanged();" />
+        </div>
+        <div class="row" my-bootstrap-tooltip-container="">
+            <div class="col-md-offset-9 col-md-3">
+                <button type="button" ng-click="model.saveName();" ng-disabled="model.isNameSaved"
+                        class="btn btn-primary pull-right margin-left-15" data-toggle="tooltip" data-placement="bottom" title="Saves the current name.">
+                    Save
+                </button>
+                <button type="button" ng-click="model.removeSavedName();" ng-disabled="model.isSavedNameAbsent"
+                        class="btn btn-danger pull-right margin-left-15" data-toggle="tooltip" data-placement="bottom" title="Removes the currently saved name.">
+                    Remove
+                </button>
+                <button type="button" ng-click="model.reloadSavedName();"
+                        class="btn btn-default pull-right" data-toggle="tooltip" data-placement="bottom" title="Reloads the currently saved name.">
+                    Reload
+                </button>
+            </div>
+        </div>
+        <div class="jumbotron top-pad">
+            <h2>Hello, {{model.name}}!</h2>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.min.js"></script>
+    <script src="../src/angularModularAppManager.js"></script>
+
+    <!-- Note that this order of loading JS files would normally mean the AngularJS application would break, but because of the Angular Modular App Manager that isn't the case here. -->
+    <script src="scripts/app.controller.js"></script>
+    <script src="scripts/app.service.js"></script>
+    <script src="scripts/app.directive.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

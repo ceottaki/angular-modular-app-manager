@@ -1,0 +1,29 @@
+{
+  "name": "angular-modular-app-manager",
+  "authors": [
+    "Felipe Ceotto <felipe.ceotto@gmail.com>"
+  ],
+  "description": "Allows AngularJS apps to be loaded in a modular fashion, eliminating the risk of loading scripts relevant to the app in the incorrect order.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ceottaki/angular-modular-app-manager.git"
+  },
+  "main": "dist/angularModularAppManager.min.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "module",
+    "manager"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

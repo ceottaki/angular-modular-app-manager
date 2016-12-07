@@ -1,0 +1,16 @@
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+.margin-left-15 {
+    margin-left: 15px;
+}
+
+.top-pad {
+    margin-top: 15px;
+}
