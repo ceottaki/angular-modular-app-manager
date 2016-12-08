@@ -11,7 +11,7 @@
             // Angular is not present, we log the error and stop loading the application.
             console.error("AngularJS has not been loaded correctly, this application will not work as intended.");
         }
-        
+
         return;
     }
 

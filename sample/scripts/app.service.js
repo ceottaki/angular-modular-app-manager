@@ -26,14 +26,19 @@
             };
 
             function onLoadName() {
-                return $q(function(resolve, reject) {
+                return $q(function (resolve, reject) {
                     if (localStorage === null) {
-                        reject({ msg: 'Local storage is not available.' });
+                        reject({
+                            msg: 'Local storage is not available.'
+                        });
                         return;
                     }
 
                     var name = localStorage.getItem('name');
-                    resolve({ data: name, msg: 'Name has been successfully loaded.' });
+                    resolve({
+                        data: name,
+                        msg: 'Name has been successfully loaded.'
+                    });
                 });
             }
 
@@ -54,14 +59,18 @@
             }
 
             function onRemoveSavedName() {
-                return $q(function(resolve, reject) {
+                return $q(function (resolve, reject) {
                     if (localStorage === null) {
-                        reject({ msg: 'Local storage is not available.' });
+                        reject({
+                            msg: 'Local storage is not available.'
+                        });
                         return;
                     }
 
                     localStorage.removeItem('name');
-                    resolve({ msg: 'Name has been successfully removed.' });
+                    resolve({
+                        msg: 'Name has been successfully removed.'
+                    });
                 });
             }
 
