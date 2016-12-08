@@ -9,6 +9,8 @@ This JavaScript module allows AngularJS applications to be created and loaded in
 1. Install via [Bower](https://bower.io/):
   ```bash
   bower install angular-modular-app-manager --production
+  # or
+  npm install angular-modular-app-manager --production
   ```
   or manually [download](https://github.com/ceottaki/angular-modular-app-manager/archive/master.zip).
 

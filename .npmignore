@@ -1,0 +1,13 @@
+bower_components
+
+.vscode
+
+.npmignore
+.codeclimate.yml
+.csslintrc
+.eslintignore
+.eslintrc
+.gitignore
+
+bower.json
+gulpfile.js

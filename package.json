@@ -1,6 +1,6 @@
 {
   "name": "angular-modular-app-manager",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "This module allows AngularJS applications to be created and loaded in a modular fashion, eliminating the risk of loading scripts relevant to the application in the incorrect order, while also promoting best practices for using the JavaScript Module Pattern.",
   "repository": "ceottaki/angular-modular-app-manager",
   "main": "dist/angularModularAppManager.min.js",

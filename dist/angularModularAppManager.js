@@ -53,7 +53,7 @@
  */
 var angularModularAppManager = (function (angular) {
     'use strict';
-    
+
     // Define module that will be exposed.
     var manager = {
         // The appModule property returns the angular module when one has been created and is the equivalent of angular.module['myApp']. 
@@ -73,8 +73,8 @@ var angularModularAppManager = (function (angular) {
     }
 
     function onCreateAngularModule(angularModule) {
-        if ((angularModule === undefined) || (angularModule === null)) {
-            throw "Value of angularModule cannot be undefined or null.";
+        if ((typeof (angularModule) !== 'object') && (typeof (angularModule) !== 'function')) {
+            throw "Value of angularModule is not an object or a function.";
         }
 
         if (manager.appModule !== null) {
@@ -82,16 +82,10 @@ var angularModularAppManager = (function (angular) {
         }
 
         // If an angular module object has been passed in stores it, but if a function to create one has been passed in call it.
-        if (typeof(angularModule) === 'object') {
-            manager.appModule = angularModule;
-        } else if (typeof(angularModule === 'function')) {
-            manager.appModule = angularModule();
-        } else {
-            throw "Value of angularModule is not an object or a function.";
-        }
+        manager.appModule = (typeof (angularModule) === 'object') ? angularModule : angularModule();
 
         // If any other modules for services, controllers or directives have been added call those.
-        if (typeof(loadedCallback) === 'function') {
+        if (typeof (loadedCallback) === 'function') {
             loadedCallback(manager.appModule);
         }
     }
